@@ -302,15 +302,23 @@ namespace Jellyfin.Plugin.MergeVersions
         private bool IsInInactiveLibrary(BaseItem item)
         {
             if (item is not Movie)
+            {
                 return false;
+            }
+
+            var parentPath = item.DisplayParent?.Path;
+            if (string.IsNullOrWhiteSpace(parentPath))
+            {
+                return false;
+            }
 
             var virtualFolders = _libraryManager.GetVirtualFolders();
 
             return !virtualFolders
-                .SelectMany(vf => vf.Locations)
-                .Any(libPath => libPath == item.DisplayParent.Path || _fileSystem.ContainsSubPath(libPath, item.DisplayParent.Path));
+                .SelectMany(vf => vf.Locations ?? Array.Empty<string>())
+                .Any(libPath => string.Equals(libPath, parentPath, StringComparison.OrdinalIgnoreCase) ||
+                                _fileSystem.ContainsSubPath(libPath, parentPath));
         }
-
         private void AddToAlternateVersionsIfNotPresent(List<LinkedChild> alternateVersions,
                                                         LinkedChild newVersion)
         {
