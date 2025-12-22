@@ -2,7 +2,7 @@
 <h3 align="center">Part of the <a href="https://jellyfin.org">Jellyfin Project</a></h3>
 
 <p align="center">
-Jellyfin Merge Versions plugin is a plugin that automatically groups every repeated movie;
+Jellyfin Merge Versions plugin is a plugin that automatically groups every repeated movie and episode.
 
 </p>
 
