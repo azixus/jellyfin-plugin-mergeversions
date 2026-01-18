@@ -13,7 +13,7 @@
                 "changelog": "Bump version",
                 "targetAbi": "10.11.0.0",
                 "sourceUrl": "https://github.com/azixus/jellyfin-plugin-mergeversions/releases/download/10.11.0.1/Jellyfin.Plugin.MergeVersions.zip",
-                "checksum": "1603e349287fac1c1b62838e99dc5d2a",
+                "checksum": "c7cded667b9102cc8bc4001c2d34672b",
                 "timestamp": "2026-01-18T13:32:00"
             }
         ]
