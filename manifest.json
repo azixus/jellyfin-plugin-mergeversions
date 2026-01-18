@@ -1,0 +1,12 @@
+[
+    {
+        "guid": "35e79e09-c7a0-4a44-856e-a40bbfa27406",
+        "name": "Merge Versions",
+        "description": "Jellyfin Merge Versions plugin is a plugin that automatically groups every repeated movie\n",
+        "overview": "Automatically merge repeated movies",
+        "owner": "azixus",
+        "imageUrl": "https://raw.githubusercontent.com/danieladov/JellyfinPluginManifest/master/resources/MergeVersions/thumb.png",
+        "category": "General",
+        "versions": []
+    }
+]
