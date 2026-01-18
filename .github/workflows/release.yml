@@ -27,7 +27,7 @@ jobs:
       - name: Zip published output
         run: |
           cd bin
-          zip -r ../Jellyfin.Plugin.MergeVersions.zip .
+          zip -r ../Jellyfin.Plugin.MergeVersions.zip Jellyfin.Plugin.MergeVersions.dll
           echo "md5 = $(md5sum ../Jellyfin.Plugin.MergeVersions.zip)"
 
       - name: Create GitHub Release
